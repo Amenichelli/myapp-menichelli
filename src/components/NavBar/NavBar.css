@@ -1,0 +1,36 @@
+.menu {
+    background-color: rgb(182, 180, 185);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 46%;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.title {
+    justify-content: center;
+    text-emphasis: circle;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to left bottom, #6b2314, #6b2a3e, #593b57, #49495c, #4d5053);
+    color: aliceblue;
+    justify-content: space-around;
+    padding: 2%;
+    box-shadow: 0 3em 5em -1em black;
+    font-size: larger;
+    border: #FFF;
+}
+
+.nav li:hover {
+    zoom: 110%;
+    border: solid 2px #FFF;
+    background-color: rgb(37, 182, 207);
+    background-size: 120%;
+    border-radius: 25%;
+    overflow: hidden;
+    color: darkblue;
+}
