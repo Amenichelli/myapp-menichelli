@@ -1,7 +1,4 @@
-.cat {
-    width: 100%;
+.catalogo {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 300px;
-    justify-content: center;
-    color: blue;
+    color: aqua;
 }

@@ -25,6 +25,12 @@
     border: #FFF;
 }
 
+.nav li {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
 .nav li:hover {
     zoom: 110%;
     border: solid 2px #FFF;
@@ -33,4 +39,9 @@
     border-radius: 25%;
     overflow: hidden;
     color: darkblue;
+}
+
+.cart {
+    width: 3%;
+    max-height: 30px;
 }
