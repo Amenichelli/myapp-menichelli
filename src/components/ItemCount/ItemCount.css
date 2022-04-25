@@ -1,0 +1,38 @@
+.item-cont {
+    width: 25%;
+    background-color: #2079b0;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 1em 5em -1em black;
+    -moz-box-shadow: 0 1em 5em -1em black;
+    box-shadow: 0 1em 5em -1em black;
+}
+
+.item-cont div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 5px 5px;
+}
+
+.btn-handle {
+    max-width: 15%;
+    border-radius: 10px;
+    border: black 2px solid;
+}
+
+.read {
+    font-size: 16px;
+    border-radius: 10px;
+    border: black 2px solid;
+}
+
+.item-cont button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 12px;
+    background-color: #fff7fe;
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0px;
+}

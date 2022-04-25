@@ -44,4 +44,5 @@
 .cart {
     width: 3%;
     max-height: 30px;
+    float: right;
 }

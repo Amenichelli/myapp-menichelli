@@ -7,17 +7,16 @@ return(
     <body className="body">
          <div className="menu">
         <h1 className="title">MyApp</h1>
-        
-        <ul className="nav">
+        <div>
+            <ul className="nav">
             <li href="#">Nosotros</li>
             <li href="#">Servicios</li>
             <li href="#">Contacto</li>
             <a href="#" className="cart"><CartWidget /></a>
-        </ul>
-        
+        </ul>  
+        </div>
     </div>
     </body>
-   
 )
 }
 export default NavBar;
