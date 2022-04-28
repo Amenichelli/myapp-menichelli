@@ -6,7 +6,7 @@ function NavBar(props){
 return(
     <body className="body">
          <div className="menu">
-        <h1 className="title">MyApp</h1>
+        <h1 className="title">Cúpula</h1>
         <div>
             <ul className="nav">
             <li href="#">Nosotros</li>
