@@ -1,5 +1,4 @@
 import React from 'react';
-import Item from '../Item/Item';
 import "./ItemDetail.css"
 import ItemCount from '../ItemCount/ItemCount';
 
@@ -17,7 +16,7 @@ function ItemDetail ({ item }) {
                     <h3> {item?.descripcion} </h3>
                     <h3> {item?.precio} </h3>
                     <div className='count-container'>
-                        <ItemCount initial={0} stock={6} onAdd={() => {}} />
+                        <ItemCount initial={0} stock={item.stock} onAdd={() => {}} />
                     </div>
                 </div>
             </div>

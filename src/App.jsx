@@ -1,15 +1,21 @@
+import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import './App.css';
-import ItemListContainer from "./components/itemListContainer/ItemListContainer";
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import Nosotros from "./pages/main/Nosotros";
+import ItemListContainer from "./pages/itemListContainer/ItemListContainer";
+import ItemDetailContainer from "./pages/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
   return (
-    <>
-    <NavBar />
-    <div className="cat"><ItemListContainer /></div>
-    <ItemDetailContainer />
-    </>
+    <div className="app">
+     <NavBar />
+      <Routes>
+        <Route path="/" element={ <ItemListContainer /> } />
+        <Route path="/category/:categoryId" element={ <ItemListContainer /> } />
+        <Route path="/item/:id" element={ <ItemDetailContainer /> } />
+        <Route path="/Nosotros" element={<Nosotros />} />
+      </Routes>
+    </div>
   );
 }
 

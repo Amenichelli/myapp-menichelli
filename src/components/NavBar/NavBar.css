@@ -1,27 +1,39 @@
+.body {
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
 .menu {
-    background-color: rgb(182, 180, 185);
+    font-size: 1.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-radius: 46%;
     justify-content: center;
-    z-index: 1000;
+    z-index: 1500;
+}
+
+.logo {
+    width: 25%;
+    position: sticky;
 }
 
 .title {
     justify-content: center;
-    text-emphasis: circle;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(230, 226, 224);
 }
 
 .nav {
+    z-index: 1000;
     list-style-type: none;
     margin: 0;
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(to left bottom, #6b2314, #6b2a3e, #593b57, #49495c, #4d5053);
+    background-color: chocolate;
     color: aliceblue;
     justify-content: space-around;
-    padding: 2%;
-    box-shadow: 0 3em 5em -1em black;
+    padding: 0.5rem;
+    box-shadow: -0.9em 1em 1em -1em rgb(247, 244, 244);
     font-size: larger;
     border: #FFF;
 }
@@ -30,20 +42,27 @@
     display: flex;
     justify-content: space-around;
     overflow: hidden;
+    margin-top: 2rem;
 }
 
 .nav li:hover {
     zoom: 110%;
-    border: solid 2px #FFF;
-    background-color: rgb(37, 182, 207);
-    background-size: 120%;
-    border-radius: 25%;
     overflow: hidden;
-    color: darkblue;
+}
+
+.nav li a {
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.nav-active {
+    font-weight: bold;
 }
 
 .cart {
-    width: 3%;
-    max-height: 30px;
+    width: 100%;
     float: right;
+    height: auto;
+    padding: 2rem;
 }
