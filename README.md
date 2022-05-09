@@ -1,3 +1,6 @@
+En el proyecto estoy plantenado una plataforma para un servicio gastronómico. Decidí utilizar css hasta tener una idea más desarrollada de como voy a seguir con el mismo. Tuve ciertas dudas a la hora de realizar una pagina de inicio pero me decanté por utilizar el NavLink para llevarla a cabo. Luego utilicé todas las galerías npm que vimos en clase, sin ninguna extra.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

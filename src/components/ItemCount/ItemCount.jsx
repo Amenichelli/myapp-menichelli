@@ -21,7 +21,7 @@ return(
             <input className="read" readOnly value={cont} />
             <button className="btn-handle" onClick={() => handleMas()}>+</button>
         </div>
-        <button onClick={() => (cont <= stock) && onAdd()}>Agregar al carrito</button>
+        <button onClick={() => (cont <= stock) && onAdd(cont)}>Agregar al carrito</button>
     </div>
 )
 }

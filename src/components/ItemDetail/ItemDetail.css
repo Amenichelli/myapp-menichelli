@@ -54,3 +54,17 @@
     justify-content: center;
     margin-left: 35%;
 }
+
+.compra {
+    font-size: large;
+    text-decoration: none;
+    background-color: beige;
+    color: rgb(247, 110, 30);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(247, 110, 30);
+    ;
+}
