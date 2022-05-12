@@ -10,7 +10,7 @@ function getData(category) {
       {
         id: 1,
         nombre: 'Pizza Margherita',
-        precio: '$850',
+        precio: '850',
         stock: "25",
         category:"pizza",
         descripcion: "Burguer con pan bricoche, medallón de carne de 120grs, cheddar, lechuga, pepinillos y salsa especial.",
@@ -19,7 +19,7 @@ function getData(category) {
     {
         id: 2,
         nombre: 'Fugazzeta Rellena',
-        precio: '$990',
+        precio: '990',
         stock: "25",
         category:"pizza",
         descripcion: "Burguer con pan bricoche, medallón de carne de 120grs, cheddar, lechuga, pepinillos y salsa especial.",
@@ -28,7 +28,7 @@ function getData(category) {
     {
         id: 3,
         nombre: 'Napo',
-        precio: '$950',
+        precio: '950',
         stock: "25",
         category:"pizza",
         descripcion: "Burguer con pan bricoche, medallón de carne de 120grs, cheddar, lechuga, pepinillos y salsa especial.",
@@ -37,7 +37,7 @@ function getData(category) {
     {
         id: 4,
         nombre: 'Cheeseburguer brioche',
-        precio: '$850',
+        precio: '850',
         stock: "25",
         category:"burger",
         descripcion: "Burguer con pan bricoche, medallón de carne de 120grs, cheddar, lechuga, pepinillos y salsa especial.",
@@ -46,7 +46,7 @@ function getData(category) {
     {
         id: 5,
         nombre: 'Cheeseburguer pan de papa',
-        precio: '$800',
+        precio: '800',
         stock: "25",
         category:"burger",
         descripcion: "Burguer con pan bricoche, medallón de carne de 120grs, cheddar, lechuga, pepinillos y salsa especial.",
@@ -55,7 +55,7 @@ function getData(category) {
     {
         id: 6,
         nombre: 'Brioche Bacon',
-        precio: '$900',
+        precio: '900',
         stock: "25",
         category:"burger",
         descripcion: "Burguer con pan bricoche, medallón de carne de 120grs, cheddar, lechuga, pepinillos y salsa especial.",
@@ -64,7 +64,7 @@ function getData(category) {
     {
         id: 7,
         nombre: 'Brioche Blue',
-        precio: '$850',
+        precio: '850',
         stock: "25",
         category:"burger",
         descripcion: "Burguer con pan bricoche, medallón de carne de 120grs, cheddar, lechuga, pepinillos y salsa especial.",

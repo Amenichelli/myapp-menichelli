@@ -1,3 +1,8 @@
 .cart-image {
     width: 100%;
 }
+
+.unidades {
+    text-decoration: none;
+    position: relative;
+}

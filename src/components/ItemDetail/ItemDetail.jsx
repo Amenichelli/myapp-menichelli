@@ -1,13 +1,23 @@
-import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import "./ItemDetail.css"
+import GoToCart from "../GoToCart/GoToCart";
 import ItemCount from '../ItemCount/ItemCount';
+import {useCartContext} from '../../store/CartContextProvider.jsx';
 
-function ItemDetail ({ item }) {
-    const [cantidadDeProductos, setCantidadDeProductos] = useState(null);
-    function addHandler(quantityToAdd) {
-        setCantidadDeProductos(quantityToAdd);
-    }
+const ItemDetail = ({ item }) => {
+    const { stock, id } = item;
+    const [countToAdd, setCountToAdd] = useState(0);
+    const { addToCart, unitsPerProduct } = useCartContext ();
+
+    const handleOnAdd = (count) => {
+        if (count + unitsPerProduct(id) > stock) {
+            const availableToAdd = stock - unitsPerProduct(id);
+            return alert ('Solamente se puede agregar ${availableToAdd} productos');
+        }
+        setCountToAdd(count);
+        addToCart(item, count);
+    };
+    
     return (
         <div className='item-detail'>
             <div className='image'>
@@ -20,11 +30,12 @@ function ItemDetail ({ item }) {
                     <h2> {item?.nombre} </h2>
                     <h3> {item?.descripcion} </h3>
                     <h3> {item?.precio} </h3>
+                    <h3> {item?.stock} </h3>
                     <div className='count-container'>
-                    {cantidadDeProductos ?
-                         <button className='compra'><Link to='/Cart'>Finalizar compra ({ cantidadDeProductos } items)</Link></button> :
-                         <ItemCount initial={0} stock={item.stock} onAdd={addHandler} />
-                    }
+                    {countToAdd === 0 ? (
+                     <ItemCount stock={stock} initial={1} onAdd={handleOnAdd} />
+                            ) : ( <GoToCart /> 
+                            )}
                     </div>
                 </div>
             </div>

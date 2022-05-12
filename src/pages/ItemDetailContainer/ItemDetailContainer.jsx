@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext,useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
+import './ItemDetailContainer.css'
 
     function getItem(id) {
             const myPromise = new Promise((resolve, reject) => {
@@ -8,7 +9,7 @@ import ItemDetail from '../../components/ItemDetail/ItemDetail';
                         {
                             id: 1,
                             nombre: 'Pizza Margherita',
-                            precio: '$850',
+                            precio: '850',
                             stock: "25",
                             category:"pizza",
                             descripcion: "Clásica pizza napoletana.",
@@ -17,7 +18,7 @@ import ItemDetail from '../../components/ItemDetail/ItemDetail';
                         {
                             id: 2,
                             nombre: 'Fugazzeta Rellena',
-                            precio: '$990',
+                            precio: '990',
                             stock: "25",
                             category:"pizza",
                             descripcion: "Pizza rellena de queso y cubierta por cebollas ",
@@ -26,7 +27,7 @@ import ItemDetail from '../../components/ItemDetail/ItemDetail';
                         {
                             id: 3,
                             nombre: 'Napo',
-                            precio: '$950',
+                            precio: '950',
                             stock: "25",
                             category:"pizza",
                             descripcion: "Clásica pizza napolitana argentina.",
@@ -35,7 +36,7 @@ import ItemDetail from '../../components/ItemDetail/ItemDetail';
                         {
                             id: 4,
                             nombre: 'Cheeseburguer brioche',
-                            precio: '$850',
+                            precio: '850',
                             stock: "25",
                             category:"burger",
                             descripcion: "Burguer con pan bricoche, medallón de carne de 120grs, cheddar, lechuga, pepinillos y salsa especial.",
@@ -44,7 +45,7 @@ import ItemDetail from '../../components/ItemDetail/ItemDetail';
                         {
                             id: 5,
                             nombre: 'Cheeseburguer pan de papa',
-                            precio: '$800',
+                            precio: '800',
                             stock: "25",
                             category:"burger",
                             descripcion: "Burguer con pan bricoche, medallón de carne de 120grs, cheddar, lechuga, pepinillos y salsa especial.",
@@ -53,7 +54,7 @@ import ItemDetail from '../../components/ItemDetail/ItemDetail';
                         {
                             id: 6,
                             nombre: 'Brioche Bacon',
-                            precio: '$900',
+                            precio: '900',
                             stock: "25",
                             category:"burger",
                             descripcion: "Burguer con pan bricoche, medallón de carne de 120grs, cheddar, lechuga, pepinillos y salsa especial.",
@@ -62,7 +63,7 @@ import ItemDetail from '../../components/ItemDetail/ItemDetail';
                         {
                             id: 7,
                             nombre: 'Brioche Blue',
-                            precio: '$850',
+                            precio: '850',
                             stock: "25",
                             category:"burger",
                             descripcion: "Burguer con pan bricoche, medallón de carne de 120grs, cheddar, lechuga, pepinillos y salsa especial.",
@@ -70,8 +71,7 @@ import ItemDetail from '../../components/ItemDetail/ItemDetail';
                         }
                     ];
                     const item = productos.filter(item => item.id === parseInt(id));
-                           
-                            setTimeout(() => {
+                     setTimeout(() => {
                                 resolve(item[0])
                             }, 2000);
             });

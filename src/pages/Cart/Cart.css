@@ -1,5 +1,19 @@
-.cart {
+.cart-inventory {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: center;
+    text-align: center;
     font-size: larger;
     color: bisque;
     text-decoration: none;
+}
+
+.total {
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+    margin: 2% 0 2 41%;
+    width: 10%;
+    padding: 30px;
+    background-color: aliceblue;
+    background-size: contain;
 }
