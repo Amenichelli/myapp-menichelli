@@ -8,14 +8,14 @@ import { collection, getDocs, getFirestore, query, where } from 'firebase/firest
 function getData(category) {
   const db = getFirestore();
 
-  const itemsCollection = collection(db, 'items')
+  const itemCollection = collection(db, 'items');
 
   const q = category &&  query(
-    itemsCollection( db, 'items' ),
+    itemCollection(db, 'items'),
     where ('category', '==', category)
   );
 
-  return getDocs(q || itemsCollection);
+  return getDocs(q || itemCollection);
 }
 
 function ItemListContainer() {
@@ -41,5 +41,4 @@ function ItemListContainer() {
     </div>
   )
 }
-
 export default ItemListContainer

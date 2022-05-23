@@ -4,6 +4,7 @@ import ItemListContainer from "../pages/itemListContainer/ItemListContainer"
 import ItemDetailContainer from "../pages/ItemDetailContainer/ItemDetailContainer";
 import Nosotros from "../pages/main/Nosotros"
 import NavBar from "../components/NavBar/NavBar";
+import Checkout from "../components/Checkout/Checkout";
 
 const AppRouter = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouter = () => {
         <Route path="/category/:categoryId" element={ <ItemListContainer /> } />
         <Route path="/item/:id" element={ <ItemDetailContainer /> } />
         <Route path="/Nosotros" element={<Nosotros />} />
+        <Route path="/Checkout" element={<Checkout />} />
       </Routes>
     </BrowserRouter>
   );
