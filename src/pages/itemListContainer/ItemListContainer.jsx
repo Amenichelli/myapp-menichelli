@@ -10,23 +10,19 @@ function getData(category) {
 
   const itemCollection = collection(db, 'items');
 
-  const q = category &&  query(
-    itemCollection(db, 'items'),
-    where ('category', '==', category)
-  );
-
-  return getDocs(q || itemCollection);
+  const q = category? query(itemCollection, where('category','==', category )): itemCollection;
+  return getDocs(q)
 }
 
 function ItemListContainer() {
-  const [productos, setproductos] = useState([]);
-  const { categoryId } = useParams();
+  const [products, setProducts] = useState([]);
+  const { categoryId } = useParams()
 
   useEffect(() => {
     getData(categoryId)
-      .then (snapshot => {
-        setproductos(snapshot.docs.map(doc => {
-          return { ...doc.data(), id: doc.id}
+      .then(res => {
+        setProducts(res.docs.map(doc => {
+          return { ...doc.data(), id: doc.id }
         }));
       })
       .catch(err => {
@@ -37,8 +33,10 @@ function ItemListContainer() {
 
   return (
     <div className='list-item-container'>
-      <ItemList items={productos} />
+      <ItemList items={products} />
     </div>
   )
 }
+
+
 export default ItemListContainer

@@ -1,5 +1,6 @@
 import "../ItemCount/ItemCount.css";
-import  {useEffect, useState } from 'react';
+import  { useState } from 'react';
+import Button from 'react-bootstrap/Button'
 
  function ItemCount({ stock, initial, onAdd}) {
     const [cont, setCont] = useState(initial);
@@ -17,11 +18,11 @@ function handleMenos(){
 return(
     <div className="item-cont">
         <div>
-            <button className="btn-handle" onClick={() => handleMenos()}>-</button>
+        <Button variant="dark" className="btn-handle" onClick={() => handleMenos()} >-</Button>{' '}
             <input className="read" readOnly value={cont} />
-            <button className="btn-handle" onClick={() => handleMas()}>+</button>
+            <Button variant="dark" className="btn-handle" onClick={() => handleMas()} >+</Button>{' '}
         </div>
-        <button onClick={() => (cont <= stock) && onAdd(cont)}>Agregar al carrito</button>
+        <Button variant="secondary" size="lg" onClick={() => (cont <= stock) && onAdd(cont)}>Agregar al carrito</Button>
     </div>
 )
 }

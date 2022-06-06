@@ -3,4 +3,25 @@
     height: 100vh;
     display: flex;
     flex-flow: row wrap;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 575.98px) {
+    .list-item-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-flow: row wrap;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 834) and (min-width: 415px) {
+    .list-item-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-flow: row wrap;
+        flex-wrap: wrap;
+    }
 }

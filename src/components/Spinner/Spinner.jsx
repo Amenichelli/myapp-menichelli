@@ -1,5 +1,5 @@
-import React  from 'react'
-import { spinnerStyle } from './SpinnerStyles'
+import React from 'react'
+import { spinnerStyle } from './spinnerStyles'
 
 const Spinner = () => {
 
@@ -14,4 +14,4 @@ const Spinner = () => {
     )
 }
 
-export default Spinner
+export default Spinner;

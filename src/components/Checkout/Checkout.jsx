@@ -1,13 +1,14 @@
-import {useState,useContext } from 'react';
-import { collection, addDoc } from "firebase/firestore";
-import { Link } from 'react-router-dom';
-import db from '../../services/firebase';
-import Spinner from '../Spinner/Spinner';
-import { CartContext } from '../../store/CartContextProvider.jsx';
+import { CartContext  } from "../../store/CartContextProvider.jsx";
+import './Checkout.css';
+import Spinner from "../Spinner/Spinner.jsx"
+import { collection, addDoc, getFirestore} from "firebase/firestore";
+import { Link } from "react-router-dom";
+import { useState, useContext} from 'react';
 
 const Checkout = () => {
 
-    const {cart,getTotal,clear}= useContext(CartContext)
+    const db = getFirestore();
+    const {cartList,emptyCart, getTotal}= useContext(CartContext)
 
     const [load, setLoad] = useState(false)
     const [orderID, setOrderID] = useState()
@@ -26,14 +27,14 @@ const Checkout = () => {
             [e.target.name]:e.target.value
         }))
     }
-  
+
     const generateOrder = async(data) => {
         setLoad(true)
         try {
             const col = collection(db,"Orders")
             const order = await addDoc(col,data) 
             setOrderID(order.id)
-            clear()
+            emptyCart()
             setLoad(false)
         } catch (error) {
             console.log(error)
@@ -43,8 +44,8 @@ const Checkout = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         const dia = new Date()
-        const items = cart.map(e=> {return {id:e.id,title:e.name,price:e.price,amount:e.amount}})        
-        const total = getTotal()
+        const items = cartList.map(e=> {return {id:e.id,title:e.nombre,price:e.precio,amount:e.quantity}})        
+        const total = getTotal(CartContext)
         const data = {buyer,items,dia,total}
         console.log("data",data)  
         generateOrder(data)
@@ -55,7 +56,8 @@ const Checkout = () => {
 
     return (
         <>
-            <h1>Finalizando Compra</h1>
+        <div className="checkout-form">
+             <h1>Finalizando Compra</h1>
             <hr />
             
             {load ? <Spinner />
@@ -111,6 +113,8 @@ const Checkout = () => {
             }
             </div>
 
+        </div>
+           
         </>
     )
 }

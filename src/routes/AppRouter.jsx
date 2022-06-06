@@ -4,8 +4,7 @@ import ItemListContainer from "../pages/itemListContainer/ItemListContainer"
 import ItemDetailContainer from "../pages/ItemDetailContainer/ItemDetailContainer";
 import Nosotros from "../pages/main/Nosotros"
 import NavBar from "../components/NavBar/NavBar";
-import Checkout from "../components/Checkout/Checkout";
-
+import Checkout from "../components/Checkout/Checkout"
 const AppRouter = () => {
   return (
     <BrowserRouter>

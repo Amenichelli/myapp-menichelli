@@ -10,4 +10,4 @@ function ItemList({ items }) {
   )
 }
 
-export default ItemList
+export default ItemList;

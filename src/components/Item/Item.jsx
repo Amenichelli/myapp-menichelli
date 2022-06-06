@@ -1,10 +1,12 @@
 import React from "react";
 import "./Item.css"
 import { Link } from "react-router-dom";
+import { Card, Button } from "react-bootstrap";
 
 
 function Item({ item }) {
   return (
+
     <div className="body-product">
       <div className='card'>
         <div className='header'>{ item?.nombre }</div>
@@ -15,7 +17,7 @@ function Item({ item }) {
             
         </div>
         <div className='footer'><Link to={"/item/" + item?.id }> 
-            <button className="btn-info"> +Info! </button> </Link></div>
+            <button className="btn-info" class='btn-dark'> +Info! </button> </Link></div>
     </div>
     </div>
     

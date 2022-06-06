@@ -1,68 +1,97 @@
-.body {
-    font-size: 62.5%;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-}
-
-.menu {
-    font-size: 1.5rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    justify-content: center;
-    z-index: 1500;
-}
-
-.logo {
-    width: 25%;
-    position: sticky;
-}
-
-.title {
-    justify-content: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(230, 226, 224);
-}
-
-.nav {
-    z-index: 1000;
-    list-style-type: none;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: chocolate;
-    color: aliceblue;
-    justify-content: space-around;
-    padding: 0.5rem;
-    box-shadow: -0.9em 1em 1em -1em rgb(247, 244, 244);
-    font-size: larger;
-    border: #FFF;
-}
-
-.nav li {
-    display: flex;
-    justify-content: space-around;
-    overflow: hidden;
-    margin-top: 2rem;
-}
-
-.nav li:hover {
-    zoom: 110%;
-    overflow: hidden;
-}
-
-.nav li a {
-    padding: 10px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-.nav-active {
-    font-weight: bold;
-}
-
-.cart {
-    width: 100%;
-    float: right;
-    height: auto;
-    padding: 2rem;
-}
+    .body {
+        font-size: 62.5%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+    
+    .navbar-nav {
+        margin-left: 30rem;
+        gap: 3rem;
+        max-height: 6rem;
+        justify-content: space-between;
+    }
+    
+    .nav li {
+        display: flex;
+        justify-content: space-around;
+        overflow: hidden;
+        margin-top: 2rem;
+    }
+    
+    .nav li:hover {
+        zoom: 110%;
+        overflow: hidden;
+        color: rgb(230, 230, 230);
+    }
+    
+    .btn-link {
+        border-radius: 2%;
+        text-decoration: none;
+        color: chocolate;
+    }
+    
+    .btn-link a {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: chocolate;
+        font-size: large;
+        text-decoration: none;
+    }
+    
+    .btn-link a:hover {
+        color: chocolate;
+        text-decoration: none;
+    }
+    
+    .nav-active {
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .cart {
+        width: 100%;
+        float: right;
+        height: 10rem;
+        padding: 1rem;
+    }
+    
+    .navigate {
+        background-color: rgb(249, 109, 9);
+        text-decoration: none;
+    }
+    
+    .logo {
+        width: 55%;
+    }
+    
+    @media only screen and (max-width: 1200px) and (min-width: 415px) {
+        .body {
+            font-size: 62.5%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+        .navbar-nav {
+            margin: auto;
+            max-height: 7.5rem;
+            gap: 0.2rem;
+            justify-content: space-between;
+            font-size: 1rem;
+        }
+    }
+    
+    @media (max-width: 575.98px) {
+        .body {
+            font-size: 62.5%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+        .navbar-nav {
+            margin: auto;
+            max-height: 7.5rem;
+            gap: 0.2rem;
+            justify-content: space-between;
+            font-size: 1rem;
+        }
+    }

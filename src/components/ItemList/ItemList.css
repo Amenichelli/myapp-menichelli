@@ -3,6 +3,27 @@
     width: 100%;
     display: flex;
     flex-flow: row;
-    gap: 30px;
     justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 415px) {
+    .item-list {
+        margin-top: 5%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .item-list {
+        margin-top: 5%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
 }

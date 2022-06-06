@@ -1,4 +1,5 @@
 import React from "react";
+import {Button} from 'react-bootstrap'
 import { Link } from "react-router-dom";
 
 import "./GoToCart.css";
@@ -6,7 +7,7 @@ import "./GoToCart.css";
 const GoToCart = () => {
   return (
     <Link to="/cart">
-      <button className="btn btn-go-to-cart">Ir al carrito</button>
+      <Button variant="danger">Ir al carrito</Button> <Button variant="info">Info</Button>{' '}
     </Link>
   );
 };

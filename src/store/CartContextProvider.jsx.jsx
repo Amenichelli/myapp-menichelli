@@ -60,6 +60,11 @@ const CartContextProvider = ({ children }) => {
     const foundInCart = cartList.find((item) => item.id === id);
     return foundInCart ? foundInCart.quantity : 0;
   };
+  const getTotal = () => {
+    let total = 0
+    cartList.forEach((e) => total += (e.quantity*e.precio))
+    return total        
+};
 
   return (
     <CartContext.Provider
@@ -72,6 +77,7 @@ const CartContextProvider = ({ children }) => {
         totalPrice,
         removeOneUnit,
         unitsPerProduct,
+        getTotal
       }}
     >
       {children}
