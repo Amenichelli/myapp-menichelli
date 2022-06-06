@@ -3,6 +3,7 @@ import './Cart.css'
 import { Link } from 'react-router-dom';
 import CartItem from '../../components/CartItem/CartItem.jsx';
 import { useCartContext } from '../../store/CartContextProvider.jsx'
+import {Badge} from 'react-bootstrap'
 
 const Cart = () => {
   const {cartList, emptyCart, totalPrice } = useCartContext()
@@ -17,7 +18,9 @@ const Cart = () => {
         <h4 >Total: ${totalPrice()}</h4>
       </div>
       <Link to='/checkout'>
-         <button className="btn btn-info">Finalizar Compra</button>
+        <Badge pill bg="dark">
+          Finalizar compra
+        </Badge>
       </Link>
       
       </>

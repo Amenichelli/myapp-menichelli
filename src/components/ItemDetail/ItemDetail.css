@@ -27,6 +27,12 @@
     object-fit: contain;
 }
 
+.card-image {
+    width: 100%;
+    object-fit: cover;
+    height: -webkit-fill-available;
+}
+
 .info {
     width: 50%;
     height: 100%;
@@ -89,6 +95,11 @@ a {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    .card-image {
+        width: 100%;
+        object-fit: cover;
+        height: -webkit-fill-available;
     }
     .img-detail-container {
         width: 100%;
@@ -161,6 +172,11 @@ a {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    .card-image {
+        width: 100%;
+        object-fit: cover;
+        height: -webkit-fill-available;
     }
     .img-detail-container {
         width: 100%;

@@ -3,6 +3,7 @@
     justify-content: center;
     text-align: center;
     font-size: larger;
+    height: 100vh;
     color: bisque;
     text-decoration: none;
 }
@@ -11,11 +12,14 @@
     font-size: 1rem;
     text-align: center;
     color: black;
-    margin: 2% 0 2 41%;
+    align-items: center;
+    border: 1% solid black;
+    border-radius: 3%;
+    margin: auto;
     width: 10%;
-    padding: 30px;
     background-color: aliceblue;
     background-size: contain;
+    text-decoration: double;
 }
 
 @media (min-width: 768px) {
@@ -31,15 +35,15 @@
         font-size: 1rem;
         text-align: center;
         color: black;
-        margin: 2% 0 2 41%;
-        width: 10%;
-        padding: 30px;
+        margin: auto;
+        width: 20%;
+        padding: 1%;
         background-color: aliceblue;
         background-size: contain;
     }
 }
 
-@media only screen and (max-width: 834) and (min-width: 415px) {
+@media only screen and (max-width: 532px) {
     .cart-inventory {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         justify-content: center;
@@ -52,8 +56,8 @@
         font-size: 1rem;
         text-align: center;
         color: black;
-        margin: 2% 0 2 41%;
-        width: 10%;
+        margin: auto;
+        width: 20%;
         padding: 1%;
         background-color: aliceblue;
         background-size: contain;

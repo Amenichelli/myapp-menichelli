@@ -65,7 +65,7 @@ const Checkout = () => {
                     <h4>Completar Datos:</h4>
                     <br />
                     <form onSubmit={handleSubmit}>
-                        <input
+                        <input className="input-form"
                             type="text"
                             name="Nombre"
                             placeholder="Nombre"
@@ -74,7 +74,7 @@ const Checkout = () => {
                             required
                         />
                         <br />
-                        <input
+                        <input className="input-form"
                             type="email"
                             name="Email"
                             placeholder="Email"
@@ -83,7 +83,7 @@ const Checkout = () => {
                             required
                         />
                         <br />
-                        <input
+                        <input className="input-form"
                             type="number"
                             name="Telefono"
                             placeholder="Telefono"
@@ -92,10 +92,10 @@ const Checkout = () => {
                             required
                         />
                         <br /><br />
-                        <input
+                        <input 
                             type="submit"
                             value="Finalizar Compra"
-                            className="btn btn-success"
+                            className="btn btn-dark"
                         />
                     </form>
                 </div>)

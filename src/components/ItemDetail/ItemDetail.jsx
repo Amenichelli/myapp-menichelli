@@ -23,7 +23,7 @@ const ItemDetail = ({ item }) => {
      
         <div className='box'>
         <Card className="bg-dark text-white">
-        <Card.Img src={item?.imagen} alt="Imagen del producto" />
+        <Card.Img className='card-image' src={item?.imagen} alt="Imagen del producto" />
         <Card.ImgOverlay>
         <Card.Title>{item.nombre}</Card.Title>
         <Card.Text>
