@@ -1,5 +1,5 @@
 import React from 'react'
-import { spinnerStyle } from './spinnerStyles'
+import { spinnerStyle } from './SpinnerStyles.jsx';
 
 const Spinner = () => {
 
